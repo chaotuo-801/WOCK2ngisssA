@@ -10,21 +10,27 @@ public class MenuPanel extends JPanel {
     private final JButton play;
     private final JButton help;
     private final JButton quit;
-    private int sign = 0;
 
-    public JButton getPlay() {
-        return play;
-    }
 
-    public JButton getHelp() {
-        return help;
-    }
-
-    public JButton getQuit() {
-        return quit;
+    public static void main(String[] args) {
+        MenuPanel menuPanel = new MenuPanel();
     }
 
     public MenuPanel() {
+
+        JFrame menuFrame = new JFrame();
+        menuFrame.setSize(900,500);
+        menuFrame.setTitle("Menu");
+        menuFrame.setResizable(false);
+        menuFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        menuFrame.setLocationRelativeTo(null);
+        // rootPanel settings
+        JPanel rootPanel =(JPanel) menuFrame.getContentPane();
+        rootPanel.add(this);
+        menuFrame.setVisible(true);
+
+
+
         //Menu Panel settings
         Box MenuBox = Box.createVerticalBox();
         play = new JButton("PLAY");
@@ -51,7 +57,8 @@ public class MenuPanel extends JPanel {
         // set buttons action
         play.addActionListener(e -> {
             if(e.getSource() == play){
-                sign = 1;
+                menuFrame.dispose();
+                new GameFrame();
             }
         });
 
@@ -77,11 +84,4 @@ public class MenuPanel extends JPanel {
 
     }
 
-    public int getSign() {
-        return sign;
-    }
-
-    public void setSign(int sign) {
-        this.sign = sign;
-    }
 }
