@@ -1,8 +1,6 @@
 package com.card;
 
 import com.card.scene.LevelOnePanel;
-import com.card.test.p1;
-import com.card.test.p2;
 
 import javax.swing.*;
 import java.awt.*;

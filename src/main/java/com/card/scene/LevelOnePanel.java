@@ -66,10 +66,10 @@ public class LevelOnePanel extends JPanel implements ActionListener, KeyListener
     @Override
     public void keyPressed(KeyEvent e) {
         if(e.getKeyCode()==KeyEvent.VK_D){
-            peopleX = peopleX + 20;
+            peopleX = peopleX + 10;
         }
         if(e.getKeyCode()==KeyEvent.VK_A){
-            peopleX = peopleX - 20;
+            peopleX = peopleX - 10;
         }
     }
 
