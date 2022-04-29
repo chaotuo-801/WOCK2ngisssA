@@ -20,7 +20,6 @@ public class PlayPanel extends JPanel {
         StatePanel statePanel = new StatePanel();
         this.add(mapPanel);
         this.add(statePanel);
-        this.getComponent(0).setFocusable(true);
         mapPanel.setLocation(0,0);
         mapPanel.setSize(900,384);
         statePanel.setLocation(0,384);

@@ -2,8 +2,6 @@ package com.card;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.Timer;
@@ -11,12 +9,13 @@ import java.util.TimerTask;
 
 
 public class CardMenu extends JFrame  {
-    
+
     JPanel rootPanel;
     MenuPanel p1;
     PlayPanel p2;
 
     public static void main(String[] args) {
+
         CardMenu cardMenu = new CardMenu();
     }
 
@@ -43,20 +42,11 @@ public class CardMenu extends JFrame  {
             @Override
             public void run() {
                 if(p1.getSign() == 1){
-                    rootPanel.transferFocus();
                     cardLayout.show(rootPanel,"p2");
-                    rootPanel.getComponent(1).setFocusable(true);
                     p1.setSign(0);
-                    System.out.println("2");
                     timer.cancel();
                 }
             }
         },100,100);
-
-
-
     }
-
-
-
 }

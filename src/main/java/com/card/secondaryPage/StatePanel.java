@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 public class StatePanel extends JPanel {
     Image headIcon  = new ImageIcon("src/main/java/com/card/img/head.png").getImage();

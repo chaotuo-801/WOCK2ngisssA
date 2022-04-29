@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class MapPanel extends JPanel implements  ActionListener,KeyListener {
+public class MapPanel extends JPanel implements  ActionListener {
     Image ImageBuffer = null;
     Graphics doubleBuffImg;
     Image bgImg1 = new ImageIcon("src/main/java/com/card/img/country1.png").getImage();
@@ -38,24 +38,7 @@ public class MapPanel extends JPanel implements  ActionListener,KeyListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         j.setBounds(peopleX,peopleY,peopleWidth,peopleHeight);
-        //System.out.printf("(%d,%d)\n",peopleX,peopleY);
-
         repaint();
-    }
-
-    @Override
-    public void keyTyped(KeyEvent e) {
-
-    }
-
-    @Override
-    public void keyPressed(KeyEvent e) {
-        System.out.println(e.getKeyChar());
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-
     }
 }
 

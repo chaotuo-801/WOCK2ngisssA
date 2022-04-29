@@ -2,6 +2,8 @@ package com.card;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 public class MenuPanel extends JPanel {
 
@@ -64,7 +66,6 @@ public class MenuPanel extends JPanel {
                 System.exit(0);
             }
         });
-
     }
 
     // draw background Img
